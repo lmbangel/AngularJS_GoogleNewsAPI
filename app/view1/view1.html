@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News</title>
+    <script type="text/javascript" src="assets/js/GoogleAPI.js"></script>
+    <link type="text/css" rel="stylesheet" href="assets/js/googleapi.css"/>
+</head>
+<style>
+    a{
+        width: 50px !important;
+        height: 50px !important;
+        background-color: green !important;
+
+    }
+</style>
+<body ng-app="myApp.view1">
+        <div ng-controller="View1Ctrl">
+            <h1 align="center">RSA HEADLINES</h1>
+            <ul ng-repeat="x in headlines">
+                <a href="{{x.url}}"><ul style="text-decoration: none"><img src="{{x.urlToImage}}" alt="{{x.title}} + image" width="500" height="300"></ul></a>
+                <a href="{{x.url}}"  style="text-decoration: none" ><ul style="text-decoration: none"><br />{{x.title}}</ul></a>
+            </ul>
+                    
+        </div>
+    
+</body>
+</html>
